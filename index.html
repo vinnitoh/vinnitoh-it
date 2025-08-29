@@ -1,49 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinnitoh IT Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333; margin: 0; padding: 0; }
-        header { background-color: #0073e6; color: white; padding: 30px 20px; text-align: center; }
-        section { max-width: 800px; margin: 30px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1, h2 { color: #0073e6; }
-        p { line-height: 1.6; }
-        a { color: #0073e6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        form input, form textarea { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
-        form button { background-color: #0073e6; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; }
-        form button:hover { background-color: #005bb5; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vinnitoh Furniture — Modern Furniture Store</title>
+  <meta name="description" content="Modern, affordable furniture. Browse sofas, chairs and tables. Contact to buy."/>
+  <style>
+    :root{
+      --accent:#2b6cb0;
+      --accent-dark:#245a9a;
+      --muted:#666;
+      --card:#ffffff;
+      --bg:#f4f6f9;
+      --radius:12px;
+      --maxw:1100px;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#222;line-height:1.4}
+    header{background:linear-gradient(135deg,var(--accent),#3191ff);color:#fff;padding:42px 20px;text-align:center}
+    header h1{margin:0;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:0.4px}
+    header p{margin:12px auto 0;max-width:900px;opacity:0.95}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:0 18px}
+    .intro{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+    .intro .lead{flex:1 1 360px;background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,30,60,0.06)}
+    .intro img{width:380px;max-width:40%;border-radius:10px;box-shadow:0 8px 28px rgba(20,30,60,0.08);flex:0 0 320px}
+    h2{color:var(--accent);margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.05);display:flex;flex-direction:column}
+    .card img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+    .card .meta{display:flex;justify-content:space-between;align-items:center;padding:10px 4px}
+    .price{font-weight:700;color:var(--accent-dark)}
+    .btn{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn:hover{background:var(--accent-dark)}
+    .about, .contact{margin-top:28px}
+    .contact form{display:grid;gap:8px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.05)}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #ddd;width:100%;font-size:0.95rem}
+    textarea{min-height:110px;resize:vertical}
+    footer{padding:18px;text-align:center;color:var(--muted);margin-top:30px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;color:white}
+    .logo .dot{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;font-weight:800}
+    @media (max-width:800px){
+      .intro img{max-width:100%;order:2}
+      .intro .lead{order:1}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Vinnitoh IT</h1>
-        <p>I’m an IT support specialist skilled in Windows installation, networking, and ERP system assistance. I help businesses optimize their systems and provide remote tech support.</p>
-    </header>
+  <header>
+    <div class="wrap topbar">
+      <div class="logo"><div class="dot">V</div> Vinnitoh Furniture</div>
+      <div style="color:rgba(255,255,255,0.95)">Modern • Comfortable • Affordable</div>
+    </div>
 
-    <section>
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:makutesa356@gmail.com">makutesa356@gmail.com</a></p>
-        <p>Phone: +254 741 010 356</p>
-        <p>Fiverr: <a href="https://www.fiverr.com/vinnitoh_it" target="_blank">https://www.fiverr.com/vinnitoh_it</a></p>
+    <div style="max-width:1100px;margin:18px auto 0">
+      <h1>Hand-picked modern furniture for your home</h1>
+      <p>Browse featured sofas, chairs and dining sets. Fast local delivery · Custom orders welcome · Contact to buy.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Intro / Hero -->
+    <section class="intro">
+      <div class="lead">
+        <h2>Featured selection</h2>
+        <p><strong>Vinnitoh Furniture</strong> — quality modern furniture made to last. We handle delivery and assembly. Contact us via email or the form below to place an order or request custom design.</p>
+        <p><strong>Contact:</strong> <a href="mailto:makutesa356@gmail.com">makutesa356@gmail.com</a> · <strong>Call:</strong> +254 741 010 356</p>
+        <p style="margin-top:8px"><a class="btn" href="#products">Browse Products</a> <a class="btn" style="background:#eee;color:#333;margin-left:8px" href="https://www.fiverr.com/vinnitoh_it" target="_blank">Hire me on Fiverr</a></p>
+      </div>
+      <img alt="Modern sofa" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=496b3b9af2c0c9d2dd8e06f4b2c0a2c3">
     </section>
 
-    <section>
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/xnnbjroz" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <!-- Products -->
+    <section id="products" style="margin-top:18px">
+      <h2>Products</h2>
+      <div class="grid">
+        <!-- Product 1 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1549187774-b4e9d6f0f1f7?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=4b6e7b1f543c8e5d0d6f3e9272b6b123" alt="Sofa">
+          <div style="padding:10px 4px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Oslo 3-Seater Sofa</strong>
+              <div class="price">KSH 28,000</div>
+            </div>
+            <p style="margin:8px 0;color:var(--muted)">Modern, comfortable fabric sofa — seating for 3, solid frame, available in gray and beige.</p>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="mailto:makutesa356@gmail.com?subject=Buy%20Oslo%203-Seater%20Sofa">Contact to Buy</a>
+              <a class="btn" style="background:#eee;color:#333" href="#contact">Ask a Question</a>
+            </div>
+          </div>
+        </article>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+        <!-- Product 2 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b34214a3f8c3f2ef2b4a6f3e9171a5f" alt="Dining set">
+          <div style="padding:10px 4px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Nordic Dining Set</strong>
+              <div class="price">KSH 18,500</div>
+            </div>
+            <p style="margin:8px 0;color:var(--muted)">Solid wood table + 4 chairs — Scandinavian design, oak finish, durable.</p>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="mailto:makutesa356@gmail.com?subject=Buy%20Nordic%20Dining%20Set">Contact to Buy</a>
+              <a class="btn" style="background:#eee;color:#333" href="#contact">Ask a Question</a>
+            </div>
+          </div>
+        </article>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <!-- Product 3 -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=a1c8b8c20b2d1b1f1f7d3c5e2a6c7b9e" alt="Accent chair">
+          <div style="padding:10px 4px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Aria Accent Chair</strong>
+              <div class="price">KSH 7,999</div>
+            </div>
+            <p style="margin:8px 0;color:var(--muted)">Stylish accent chair for living rooms and bedrooms — soft upholstery and tapered legs.</p>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="mailto:makutesa356@gmail.com?subject=Buy%20Aria%20Accent%20Chair">Contact to Buy</a>
+              <a class="btn" style="background:#eee;color:#333" href="#contact">Ask a Question</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-            <button type="submit">Send Message</button>
+    <!-- About -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p style="max-width:780px">We craft and source modern furniture that blends comfort with durability. Local delivery and installation available. We also accept custom orders — send measurements and design notes and we’ll respond with a quote.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact & Orders</h2>
+      <div style="display:grid;grid-template-columns:1fr;gap:12px">
+        <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.04)">
+          <p><strong>Email:</strong> <a href="mailto:makutesa356@gmail.com">makutesa356@gmail.com</a><br><strong>Phone:</strong> +254 741 010 356</p>
+        </div>
+
+        <!-- Functional contact form (Formspree) -->
+        <form action="https://formspree.io/f/xnnbjroz" method="POST" style="max-width:720px">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="_replyto" placeholder="Your email" required>
+          <input type="text" name="subject" placeholder="Subject (e.g. Buy Aria Accent Chair)" required>
+          <textarea name="message" placeholder="Your message / delivery address / measurements" required></textarea>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn" type="submit">Send Message</button>
+            <small style="color:var(--muted)">We reply within 24 hours.</small>
+          </div>
         </form>
+      </div>
     </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width:var(--maxw);margin:0 auto;padding:0 18px">
+      <small>© <strong>Vinnitoh Furniture</strong> — Modern furniture. <a href="https://www.fiverr.com/vinnitoh_it" target="_blank">Hire me on Fiverr</a></small>
+    </div>
+  </footer>
 </body>
 </html>
